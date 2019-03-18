@@ -38,17 +38,15 @@ function insertionSort(array) {
     let length = 1;
     let temp;
     let count;
-    while(length <= array.length){
+    while(length < array.length){
       count = length;
-      if(length > 1){
-        while(count != 0){
-          if(array[count] < array[count - 1]){
-            temp = array[count];
-            array[count] = array[count - 1];
-            array[count - 1] = temp;   
-          }
-          count = count -1;
+      while(count != 0){
+        if(array[count] < array[count - 1]){
+          temp = array[count];
+          array[count] = array[count - 1];
+          array[count - 1] = temp;   
         }
+        count = count -1;
       }
       length = length + 1;
     }
